@@ -3,7 +3,7 @@ import { Text, View, Image, StyleSheet } from 'react-native'
 import TabNavigator from 'react-native-tab-navigator'
 
 import Cookbook from './cookbook/Cookbook'
-import Category from './Category'
+import Category from './category/Category'
 
 const cookbook = require('../../assets/images/cookbook.png')
 const cookbookActive = require('../../assets/images/cookbook-active.png')

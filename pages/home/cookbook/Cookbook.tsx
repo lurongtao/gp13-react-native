@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 
 import Header from './Header'
 import Swiper from './Swiper'
+import HotCate from './HotCate'
 import Top10 from './Top10'
 
 interface Props {
@@ -21,8 +22,15 @@ export default class Cookbook extends Component<Props, State> {
     return (
       <View>
         <Header></Header>
-        <Swiper></Swiper>
-        <Top10></Top10>
+        <ScrollView
+          contentContainerStyle={{
+            paddingBottom: 120
+          }}
+        >
+          <Swiper></Swiper>
+          <HotCate></HotCate>
+          <Top10></Top10>
+        </ScrollView>
       </View>
     )
   }
