@@ -21,14 +21,14 @@ export default class Cookbook extends Component<Props, State> {
   render() {
     return (
       <View>
-        <Header></Header>
+        {/* <Header></Header> */}
         <ScrollView
           contentContainerStyle={{
             paddingBottom: 120
           }}
         >
           <Swiper></Swiper>
-          <HotCate></HotCate>
+          <HotCate {...this.props}></HotCate>
           <Top10></Top10>
         </ScrollView>
       </View>

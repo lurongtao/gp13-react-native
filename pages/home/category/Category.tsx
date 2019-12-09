@@ -13,7 +13,7 @@ export default class Top10 extends Component<Props, State> {
   render() {
     return (
       <>
-        <Header></Header>
+        {/* <Header></Header> */}
         <List
           listSize={20}
         ></List>

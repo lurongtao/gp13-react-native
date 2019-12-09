@@ -6,7 +6,7 @@ import http from '../../../utils/http'
 import styles from './style-cookbook'
 
 interface Props {
-  
+  navigation?: any
 }
 interface State {
   hotlist: object[]
@@ -49,7 +49,12 @@ class HotCate extends Component<Props, State> {
       <Grid
         data={data}
         columnNum={3}
-        onPress={(_el, index) => alert(index)}
+        onPress={(_el, index) => {
+          console.log(_el)
+          this.props.navigation.push('Details', {
+            title: _el.title
+          })
+        }}
         renderItem={renderItem}
         hasLine={false}
       />
