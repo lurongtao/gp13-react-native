@@ -18,7 +18,7 @@ class HotCate extends Component<Props, State> {
   }
 
   async componentDidMount() {
-    let result = await http.get('http://localhost:8888/api/hot')
+    let result = await http.get('http://localhost:9000/api/hot')
     this.setState({
       hotlist: result['hot-category']
     })

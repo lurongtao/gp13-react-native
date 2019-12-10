@@ -17,7 +17,7 @@ const more = require('../../assets/images/more.png')
 const moreActive = require('../../assets/images/more-active.png')
 
 function LayoutUI (props) {
-  let [selectedTab, changeTab] = useState('cookbook')
+  let [selectedTab, changeTab] = useState('profile')
   return (
     <TabNavigator
       tabBarStyle={{
@@ -50,7 +50,7 @@ function LayoutUI (props) {
         {<Category></Category>}
       </TabNavigator.Item>
       {
-        props.switchStore.show && (
+        props.show && (
           <TabNavigator.Item
             selectedTitleStyle={{color: '#000'}}
             selected={selectedTab === 'map'}
@@ -79,7 +79,6 @@ function LayoutUI (props) {
       </TabNavigator.Item>
     </TabNavigator>
   )
-
 }
 
 const styles = StyleSheet.create({

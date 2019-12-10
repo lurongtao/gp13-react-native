@@ -27,7 +27,7 @@ class Swiper extends Component<Props, State> {
   }
 
   async componentDidMount() {
-    let result = await http.get('http://localhost:8888/api/list')
+    let result = await http.get('http://localhost:9000/api/list')
     this.props.store.loadData(result.data)
   }
 

@@ -2,9 +2,9 @@ import { observable, action } from 'mobx'
 
 class Store {
   @observable
-  show: boolean = false
+  show: boolean = true
 
-  @action
+  @action.bound
   changeShow(show): void {
     this.show = show
   }
